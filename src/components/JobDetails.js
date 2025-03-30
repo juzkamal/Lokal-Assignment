@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { View, Text, TouchableOpacity, StyleSheet } from 'react-native';
+import { View, Text, TouchableOpacity, StyleSheet, Image } from 'react-native';
 import Ionicons from 'react-native-vector-icons/Ionicons';
 import AsyncStorage from '@react-native-async-storage/async-storage';
 
@@ -56,12 +56,16 @@ const JobDetailsScreen = ({ route, navigation }) => {
         </TouchableOpacity>
       </View>
 
+      <Image source={{uri: job.img}} style={styles.image}/>
+
       <Text><Text style={styles.label}>Location:</Text> {job.place}</Text>
       <Text><Text style={styles.label}>Salary:</Text> {job.salary}</Text>
       <Text><Text style={styles.label}>Vacancies:</Text> {job.vacancies}</Text>
       <Text><Text style={styles.label}>Contact No:</Text> {job.whatsapp_no}</Text>
       <Text><Text style={styles.label}>Job Hours:</Text> {job.job_hours}</Text>
       <Text><Text style={styles.label}>Job Role:</Text> {job.job_role}</Text>
+
+      
     </View>
   );
 };
@@ -86,6 +90,14 @@ const styles = StyleSheet.create({
   },
   label: {
     fontWeight: 'bold',
+    fontSize: 16,
+  },
+  image:{
+    marginTop:20,
+    marginBottom: 20,
+    height:300,
+    width:300,
+    alignSelf:"center"
   }
 });
 

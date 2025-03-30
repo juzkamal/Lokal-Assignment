@@ -39,6 +39,7 @@ const formatJobs = () => {
           vacancies: item.openings_count || 'Not provided',
           job_hours: item.job_hours || 'Not provided',
           job_role: item.job_role || 'Not specified',
+          img: item.creatives?.[0]?.file || 'N/A' 
         }));
 
       setData(isRefreshing ? newJobs : [...data, ...newJobs]);

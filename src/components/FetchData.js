@@ -66,8 +66,8 @@ const FetchDataScreen = () => {
                 <Ionicons name='person-outline' color='grey' size={14} /> {item.vacancies}
               </Text>
               <Text>
-                <Ionicons name='cash-outline' color='grey' size={14} style={{ marginRight: 5 }}/> 
-                {item.salary}
+                <Ionicons name='cash-outline' color='grey' size={14} style={{ marginRight: 24}}/> 
+                {" "+item.salary}
 
               </Text>
             </View>
